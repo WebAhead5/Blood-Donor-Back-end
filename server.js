@@ -1,6 +1,6 @@
 const app = require('./src/app');
 
-app.set('port', process.env.PORT || 8080)
+app.set('port', process.env.PORT || 80)
 let port = app.get('port')
 
 app.listen(port, () => {
