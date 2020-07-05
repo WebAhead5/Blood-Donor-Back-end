@@ -119,6 +119,7 @@ fetchLocations = () => new Promise(
             },
             RequestData: ''
         }));
+        console.log(req);
         req.end();
     }
 );
