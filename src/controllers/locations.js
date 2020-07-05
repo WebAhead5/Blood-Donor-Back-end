@@ -73,7 +73,6 @@ fetchLocations = () => new Promise(
         const options = {
             "method": "POST",
             "hostname": "testing-server-mda.herokuapp.com",
-            "port": "4000",
             "scheme": "https",
             "path": "/umbraco/api/invoker/execute",
             "headers": {
