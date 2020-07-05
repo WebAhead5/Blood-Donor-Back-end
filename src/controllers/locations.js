@@ -72,8 +72,8 @@ fetchLocations = () => new Promise(
 
         const options = {
             "method": "POST",
-            "hostname": "www.mdais.org",
-            "port": null,
+            "hostname": "185.3.145.1",
+            "port": "4000",
             "scheme": "https",
             "path": "/umbraco/api/invoker/execute",
             "headers": {
