@@ -102,9 +102,11 @@ fetchLocations = () => new Promise(
             });
 
             res.on("end", function () {
-                var obj = JSON.parse(chunks);
+     //           var obj = JSON.parse(chunks);
 
-                resolve(JSON.parse(obj.Result));
+     //           resolve(JSON.parse(obj.Result));
+     console.log(chunks);
+        resolve(chunks);
             });
         });
 
