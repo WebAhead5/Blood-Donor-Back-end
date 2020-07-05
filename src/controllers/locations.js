@@ -72,7 +72,8 @@ fetchLocations = () => new Promise(
 
         const options = {
             "method": "POST",
-            "hostname": "testing-server-mda.herokuapp.com",
+            "hostname": "www.mdais.org",
+            "port": null,
             "scheme": "https",
             "path": "/umbraco/api/invoker/execute",
             "headers": {
@@ -81,7 +82,7 @@ fetchLocations = () => new Promise(
                 "cache-control": "no-cache",
                 "postman-token": "f6b4a7b0-2873-f2fe-18d7-241704b44b78",
                 "cookie": "GCLB=CJSY9sTAh7WIhQE; rbzsessionid=2a9b60db124b2002c01afb275fb854c0; _ga=GA1.2.1892371988.1592293688; _fbp=fb.1.1592293688005.696364955; __atssc=google%3B2; _gid=GA1.2.474835944.1592819432; rbzid=0TBhmOE820ArGr4ItiazDPOBPc9evHbIcro2K2EZ02Xx4X4v2FbHKXLuPQdi4q89XnGC/2mW3EWjYW16mSyXB+wilbnuqkDhkd/yiJGC5ZibiUR0FPnYFhI3u/wM95ggPbtpTU4KO6Fi9aVM2hVwB0+ZNokYKG3ibAlKljwK49N45kkXtCvaaGQcbBV8H1+S9fzlKt2m8Kyo5tSf9SWCoziWSbHYXFajWsygptQQ8HbdDjgm35VZ4db1SVrtfLdQ47OQqvZx0qiqKCvO8dXXEA==; __atuvc=25%7C25%2C6%7C26; __atuvs=5ef0a8db5474d3c4001",
-                "origin": "testing-server-mda.herokuapp.com",
+                "origin": "https://www.mdais.org",
                 "authority": "www.mdais.org",
                 "accept-encoding": "json",
                 "accept-language": "en-US,en;q=0.9,he-IL;q=0.8,he;q=0.7,ar-IL;q=0.6,ar;q=0.5",
@@ -96,8 +97,10 @@ fetchLocations = () => new Promise(
 
         var req = http.request(options, function (res) {
             var chunks = "";
-
+            console.log(res.headers);
+            console.log(res.code);
             res.on("data", function (chunk) {
+                console.log(chunk).toString();
                 chunks += chunk.toString();
             });
 
