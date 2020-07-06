@@ -84,7 +84,7 @@ fetchLocations = () => new Promise(
             "method": "POST",
             "hostname": "www.mdais.org",
             "port": null,
-            "scheme": "http",
+            "scheme": "https",
             "path": "/umbraco/api/invoker/execute",
             "headers": {
                 "accept": "application/json, text/plain, */*",
@@ -93,6 +93,8 @@ fetchLocations = () => new Promise(
                 "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
             }
         };
+
+        console.log(options)
 
         var req = http.request(options, function (res) {
             var chunks = "";
