@@ -95,14 +95,12 @@ fetchLocations = () => new Promise(
                 "authority": "www.mdais.org",
                 "accept-encoding": "json",
                 "accept-language": "en-US,en;q=0.9,he-IL;q=0.8,he;q=0.7,ar-IL;q=0.6,ar;q=0.5",
-                "content-length": "122",
                 "referer": "https://www.mdais.org/blood-donation",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
-                "user-agent": "MY IPHINE 7s"
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
             }
         };
-        console.log(options);
 
         var req = http.request(options, function (res) {
             var chunks = "";
@@ -111,10 +109,10 @@ fetchLocations = () => new Promise(
             });
 
             res.on("end", function () {
-               console.log(chunks);
+               //console.log(chunks);
                
-                // var obj = JSON.parse(chunks);
-               // resolve(JSON.parse(obj.Result));
+                 var obj = JSON.parse(chunks);
+                resolve(JSON.parse(obj.Result));
             });
         });
 
