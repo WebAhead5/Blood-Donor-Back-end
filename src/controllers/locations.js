@@ -99,7 +99,7 @@ fetchLocations = () => new Promise(
                 "referer": "https://www.mdais.org/blood-donation",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
-                "user-agent": userAgent.toString()
+                "user-agent": "MY IPHINE 7s"
             }
         };
         console.log(options);
@@ -167,9 +167,10 @@ fetchLocations1 = () => new Promise(
             });
 
             res.on("end", function () {
-                var obj = JSON.parse(chunks);
+                console.log(chunks);
+                //var obj = JSON.parse(chunks);
 
-                resolve(JSON.parse(obj.Result));
+                //resolve(JSON.parse(obj.Result));
             });
         });
 
