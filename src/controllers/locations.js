@@ -87,8 +87,7 @@ fetchLocations = () => new Promise(
             "headers": {
                 "content-type": "application/json",
                 "cookie": "rbzid=0TBhmOE820ArGr4ItiazDPOBPc9evHbIcro2K2EZ02Xx4X4v2FbHKXLuPQdi4q89XnGC/2mW3EWjYW16mSyXB+wilbnuqkDhkd/yiJGC5ZibiUR0FPnYFhI3u/wM95ggPbtpTU4KO6Fi9aVM2hVwB0+ZNokYKG3ibAlKljwK49N45kkXtCvaaGQcbBV8H1+S9fzlKt2m8Kyo5tSf9SWCoziWSbHYXFajWsygptQQ8HbdDjgm35VZ4db1SVrtfLdQ47OQqvZx0qiqKCvO8dXXEA==",
-                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
-                              
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"          
             }
         };
 
@@ -168,7 +167,7 @@ fetchLocations1 = () => new Promise(
         req.write(JSON.stringify({
             RequestHeader:
             {
-                Application: 101,
+                Application: 103,
                 Module: 'BloodBank',
                 Function: 'GetAllDetailsDonations',
                 Token: ''
