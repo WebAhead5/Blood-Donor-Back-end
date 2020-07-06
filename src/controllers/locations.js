@@ -94,7 +94,6 @@ fetchLocations = () => new Promise(
                 "origin": "https://www.mdais.org",
                 "authority": "www.mdais.org",
                 "accept-encoding": "json",
-                "accept-language": "en-US,en;q=0.9,he-IL;q=0.8,he;q=0.7,ar-IL;q=0.6,ar;q=0.5",
                 "referer": "https://www.mdais.org/blood-donation",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
