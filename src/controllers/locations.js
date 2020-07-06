@@ -1,7 +1,16 @@
 const fs = require('fs');
 const http = require("https");
+const UserAgent = require('user-agents');
+
+const userAgent = new UserAgent();
+ 
+ 
+
 
 exports.getAllLocations = (req, res) => {
+    
+    // console.log();
+    // console.log(JSON.stringify(userAgent.data, null, 2));
 
     let rawdata = "";
     try {
@@ -31,6 +40,7 @@ exports.getLocationsIframe = (req, res) => {
 }
 
 exports.getAllLocationsFromServer = () => {
+
 
     fetchLocations().then((result) => {
         try {
@@ -89,10 +99,10 @@ fetchLocations = () => new Promise(
                 "referer": "https://www.mdais.org/blood-donation",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
-                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
+                "user-agent": userAgent.toString()
             }
         };
-
+        console.log(options);
 
         var req = http.request(options, function (res) {
             var chunks = "";
@@ -103,8 +113,6 @@ fetchLocations = () => new Promise(
             res.on("end", function () {
                 var obj = JSON.parse(chunks);
                 resolve(JSON.parse(obj.Result));
-                //console.log(chunks);
-                //resolve(chunks);
             });
         });
 
