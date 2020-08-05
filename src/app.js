@@ -39,10 +39,15 @@ app.engine(
 		helpers,
 	})
 );
-
-var getLocationScheduleJob = schedule.scheduleJob('00 00 * * *', function(){
+	
 	getAllLocationsFromServer();
+	
+    schedule.scheduleJob('00 00 * * *', function(){
+		getAllLocationsFromServer();
+
 });
+
+
 
 
 module.exports = app;
